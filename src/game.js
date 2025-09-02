@@ -1,7 +1,26 @@
 // Game logic for the roguelite shooter
 
 import engine from './engine.js';
-const {offCtx,keys,mouse,addEntity,removeEntity,entities,drawSprite,drawText,randRange,randInt,choice,clamp,lerp,playSFX,shake} = engine;
+// Destructure required engine utilities including offCanvas so we can access
+// its dimensions for boundary checks and minimap rendering.
+const {
+    offCtx,
+    offCanvas,
+    keys,
+    mouse,
+    addEntity,
+    removeEntity,
+    entities,
+    drawSprite,
+    drawText,
+    randRange,
+    randInt,
+    choice,
+    clamp,
+    lerp,
+    playSFX,
+    shake
+} = engine;
 
 // Sprite definitions -------------------------------------------------------
 export const SPR_PLAYER = [8,[
